@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher
 import asyncio
+import logging
 
 from aiogram.enums import ParseMode
 
@@ -9,6 +10,8 @@ from bot.settings import settings
 
 
 async def main():
+    logging.basicConfig(format=logging.BASIC_FORMAT, level=logging.INFO)
+
     bot = Bot(token=settings.TOKEN.get_secret_value(), parse_mode=ParseMode.HTML)
     dp = Dispatcher()
     await bot.delete_webhook(drop_pending_updates=True)
