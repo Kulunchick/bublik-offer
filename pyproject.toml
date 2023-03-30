@@ -1,0 +1,19 @@
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "pre-commit>=3.2.1",
+]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Kulunchick", email = "nikolikrasovski@gmail.com"},
+]
+dependencies = [
+    "aiogram>=3.0.0b7",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
