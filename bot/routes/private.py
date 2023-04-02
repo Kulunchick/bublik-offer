@@ -1,8 +1,10 @@
-from aiogram import Router
+from aiogram import Router, F
+from aiogram.enums import ChatType
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 private_router = Router()
+private_router.message.filter(F.chat.type == ChatType.PRIVATE)
 
 
 @private_router.message(CommandStart())
